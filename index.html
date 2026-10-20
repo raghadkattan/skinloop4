@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKINLOOP - متجر العناية بالبشرة</title>
+    <!-- ربط ملف CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- خط تجوال -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!--الهيدر والبنر  -->
+    <header class="main-header">
+        <div class="banner-container">
+            <!--  الصورة يلي فوق    -->
+            <img src="banner.jpg" alt="غلاف المتجر" class="banner-img">
+        </div>
+        <nav class="nav-bar">
+            <h1 class="logo-title">SKINLOOP</h1>
+            <button class="cart-btn" onclick="toggleCart()">
+                🛒 السلة (<span id="cart-count">0</span>)
+            </button>
+        </nav>
+    </header>
+
+    <!-- شريط المسار والعودة -->
+    <div class="breadcrumb-bar" id="breadcrumb-bar">
+        <button class="back-btn" id="back-btn" onclick="goBack()" style="display: none;">← العودة للقسم السابق</button>
+        <span id="current-path">الصفحة الرئيسية</span>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="container">
+
+        <!-- ==================== الصفحة الرئيسية ==================== -->
+        <section id="page-home" class="page active">
+            <h2 class="section-title">الأقسام الرئيسية</h2>
+            <div class="grid-container">
+                <!-- قسم العناية بالبشرة -->
+                <div class="category-card touch-effect" onclick="navigateTo('page-skincare', 'العناية بالبشرة')">
+                    <img src="skincare-banner.jpg" alt="العناية بالبشرة" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=صورة+قسم+البشرة'">
+                    <div class="card-overlay">
+                        <h3>العناية بالبشرة</h3>
+                    </div>
+                </div>
+
+                <!-- قسم العناية بالجسم -->
+                <div class="category-card touch-effect" onclick="navigateTo('page-bodycare', 'العناية بالجسم')">
+                    <img src="bodycare-banner.jpg" alt="العناية بالجسم" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=صورة+قسم+الجسم'">
+                    <div class="card-overlay">
+                        <h3>العناية بالجسم</h3>
+                    </div>
+                </div>
+
+                <!-- قسم العناية بالشعر والرموش -->
+                <div class="category-card touch-effect" onclick="navigateTo('page-haircare', 'العناية بالشعر والرموش')">
+                    <img src="haircare-banner.jpg" alt="العناية بالشعر والرموش" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=صورة+قسم+الشعر'">
+                    <div class="card-overlay">
+                        <h3>العناية بالشعر والرموش</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== صفحة العناية بالبشرة ==================== -->
+        <section id="page-skincare" class="page">
+            <h2 class="section-title">قسم العناية بالبشرة</h2>
+            <div class="grid-container">
+                <div class="category-card touch-effect" onclick="navigateTo('page-lipcare', 'العناية بالبشرة > العناية بالشفاه')">
+                    <img src="lipcare.jpg" alt="العناية بالشفاه" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=العناية+بالشفاه'">
+                    <div class="card-overlay"><h3>العناية بالشفاه</h3></div>
+                </div>
+                <div class="category-card touch-effect" onclick="navigateTo('page-facecare', 'العناية بالبشرة > العناية ببشرة الوجه')">
+                    <img src="facecare.jpg" alt="العناية ببشرة الوجه" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=بشرة+الوجه'">
+                    <div class="card-overlay"><h3>العناية ببشرة الوجه</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- الفرع: العناية بالشفاه -->
+        <section id="page-lipcare" class="page">
+            <h2 class="section-title">العناية بالشفاه</h2>
+            <div class="grid-container">
+                <div class="category-card touch-effect" onclick="navigateTo('page-gloss', 'العناية بالشفاه > غلوسات')">
+                    <img src="gloss.jpg" alt="غلوسات" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=غلوسات'">
+                    <div class="card-overlay"><h3>غلوسات</h3></div>
+                </div>
+                <div class="category-card touch-effect" onclick="navigateTo('page-lipscrub', 'العناية بالشفاه > سكراب شفاه')">
+                    <img src="lipscrub.jpg" alt="سكراب شفاه" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=سكراب+شفاه'">
+                    <div class="card-overlay"><h3>سكراب شفاه</h3></div>
+                </div>
+                <div class="category-card touch-effect" onclick="navigateTo('page-lipbalm', 'العناية بالشفاه > ليب بالم')">
+                    <img src="lipbalm.jpg" alt="ليب بالم" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=ليب+بالم'">
+                    <div class="card-overlay"><h3>ليب بالم</h3></div>
+                </div>
+                <div class="category-card touch-effect" onclick="navigateTo('page-lipmask', 'العناية بالشفاه > ليب ماسك')">
+                    <img src="lipmask.jpg" alt="ليب ماسك" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=ليب+ماسك'">
+                    <div class="card-overlay"><h3>ليب ماسك</h3></div>
+                </div>
+                <div class="category-card touch-effect" onclick="navigateTo('page-lippackages', 'العناية بالشفاه > باكجات الشفاه')">
+                    <img src="lippackages.jpg" alt="باكجات الشفاه" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=باكجات+الشفاه'">
+                    <div class="card-overlay"><h3>باكجات الشفاه</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- الفرع: العناية ببشرة الوجه -->
+        <section id="page-facecare" class="page">
+            <h2 class="section-title">العناية ببشرة الوجه</h2>
+            <div class="grid-container">
+                <div class="category-card touch-effect" onclick="navigateTo('page-cleanser', 'بشرة الوجه > غسولات')">
+                    <img src="cleanser.jpg" alt="غسولات" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=غسولات'">
+                    <div class="card-overlay"><h3>غسولات</h3></div>
+                </div>
+                <div class="category-card touch-effect" onclick="navigateTo('page-moisturizer', 'بشرة الوجه > مرطبات')">
+                    <img src="moisturizer.jpg" alt="مرطبات" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=مرطبات'">
+                    <div class="card-overlay"><h3>مرطبات</h3></div>
+                </div>
+                <div class="category-card touch-effect" onclick="navigateTo('page-serum', 'بشرة الوجه > سيرومات')">
+                    <img src="serum.jpg" alt="سيرومات" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=سيرومات'">
+                    <div class="card-overlay"><h3>سيرومات</h3></div>
+                </div>
+                <div class="category-card touch-effect" onclick="navigateTo('page-toner', 'بشرة الوجه > تونرات')">
+                    <img src="toner.jpg" alt="تونرات" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=تونرات'">
+                    <div class="card-overlay"><h3>تونرات</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- الصفحات الفارغة حاليا -->
+        <section id="page-gloss" class="page"><h2 class="section-title">قسم الغلوسات</h2><div class="grid-container" id="grid-gloss"></div></section>
+        <section id="page-lipscrub" class="page"><h2 class="section-title">قسم سكراب الشفاه</h2><div class="grid-container" id="grid-lipscrub"></div></section>
+        <section id="page-lipbalm" class="page"><h2 class="section-title">قسم الليب بالم</h2><div class="grid-container" id="grid-lipbalm"></div></section>
+        <section id="page-lipmask" class="page"><h2 class="section-title">قسم الليب ماسك</h2><div class="grid-container" id="grid-lipmask"></div></section>
+        <section id="page-lippackages" class="page"><h2 class="section-title">قسم باكجات الشفاه</h2><div class="grid-container" id="grid-lippackages"></div></section>
+        <section id="page-cleanser" class="page"><h2 class="section-title">قسم الغسولات</h2><div class="grid-container" id="grid-cleanser"></div></section>
+        <section id="page-moisturizer" class="page"><h2 class="section-title">قسم المرطبات</h2><div class="grid-container" id="grid-moisturizer"></div></section>
+        <section id="page-serum" class="page"><h2 class="section-title">قسم السيرومات</h2><div class="grid-container" id="grid-serum"></div></section>
+        <section id="page-toner" class="page"><h2 class="section-title">قسم التونرات</h2><div class="grid-container" id="grid-toner"></div></section>
+
+        <!-- ==================== صفحة العناية بالجسم ==================== -->
+        <section id="page-bodycare" class="page">
+            <h2 class="section-title">قسم العناية بالجسم</h2>
+            <div class="grid-container">
+                <div class="category-card touch-effect" onclick="navigateTo('page-lotions', 'العناية بالجسم > اللوشنات')">
+                    <img src="lotions.jpg" alt="لوشنات" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=لوشنات'">
+                    <div class="card-overlay"><h3>لوشنات</h3></div>
+                </div>
+                <div class="category-card touch-effect" onclick="navigateTo('page-bodyscrubs', 'العناية بالجسم > سكرابات الجسم')">
+                    <img src="bodyscrubs.jpg" alt="سكرابات" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=سكرابات'">
+                    <div class="card-overlay"><h3>سكرابات</h3></div>
+                </div>
+                <div class="category-card touch-effect" onclick="navigateTo('page-showergel', 'العناية بالجسم > شاور جل')">
+                    <img src="showergel.jpg" alt="شاور جل" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=شاور+جل'">
+                    <div class="card-overlay"><h3>شاور جل</h3></div>
+                </div>
+                <div class="category-card touch-effect" onclick="navigateTo('page-bodypackages', 'العناية بالجسم > باكجات العناية بالجسم')">
+                    <img src="bodypackages.jpg" alt="باكجات العناية بالجسم" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=باكجات+الجسم'">
+                    <div class="card-overlay"><h3>باكجات العناية بالجسم</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- منتجات العناية بالجسم -->
+        <section id="page-lotions" class="page">
+            <h2 class="section-title">قسم اللوشنات</h2>
+            <div class="grid-container" id="grid-lotions"></div>
+        </section>
+
+        <section id="page-bodyscrubs" class="page">
+            <h2 class="section-title">قسم السكرابات</h2>
+            <div class="grid-container" id="grid-bodyscrubs"></div>
+        </section>
+
+        <section id="page-showergel" class="page">
+            <h2 class="section-title">قسم الشاور جل</h2>
+            <div class="grid-container" id="grid-showergel"></div>
+        </section>
+
+        <section id="page-bodypackages" class="page">
+            <h2 class="section-title">باكجات العناية بالجسم</h2>
+            <div class="grid-container" id="grid-bodypackages"></div>
+        </section>
+
+        <!-- ==================== صفحة العناية بالشعر والرموش ==================== -->
+        <section id="page-haircare" class="page">
+            <h2 class="section-title">قسم العناية بالشعر والرموش</h2>
+            <div class="grid-container">
+                <div class="category-card touch-effect" onclick="navigateTo('page-shampoo', 'الشعر والرموش > الشامبوهات')">
+                    <img src="shampoo.jpg" alt="الشامبوهات" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=الشامبوهات'">
+                    <div class="card-overlay"><h3>الشامبوهات</h3></div>
+                </div>
+                <div class="category-card touch-effect" onclick="navigateTo('page-conditioner', 'الشعر والرموش > البلسم')">
+                    <img src="conditioner.jpg" alt="البلسم" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=البلسم'">
+                    <div class="card-overlay"><h3>البلسم</h3></div>
+                </div>
+                <div class="category-card touch-effect" onclick="navigateTo('page-leavein', 'الشعر والرموش > الليف ان')">
+                    <img src="leavein.jpg" alt="الليف ان" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=الليف+ان'">
+                    <div class="card-overlay"><h3>الليف ان</h3></div>
+                </div>
+                <div class="category-card touch-effect" onclick="navigateTo('page-hairperfume', 'الشعر والرموش > معطرات الشعر')">
+                    <img src="hairperfume.jpg" alt="معطرات الشعر" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=معطرات+الشعر'">
+                    <div class="card-overlay"><h3>معطرات الشعر</h3></div>
+                </div>
+                <div class="category-card touch-effect" onclick="navigateTo('page-hairserum', 'الشعر والرموش > سيرومات الشعر')">
+                    <img src="hairserum.jpg" alt="سيرومات الشعر" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=سيرومات+الشعر'">
+                    <div class="card-overlay"><h3>سيرومات الشعر</h3></div>
+                </div>
+                <div class="category-card touch-effect" onclick="navigateTo('page-lashes', 'الشعر والرموش > الرموش')">
+                    <img src="lashes.jpg" alt="الرموش" onerror="this.src='https://via.placeholder.com/400x400/fde8f0/d47a96?text=الرموش'">
+                    <div class="card-overlay"><h3>الرموش</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-shampoo" class="page"><h2 class="section-title">قسم الشامبوهات</h2><div class="grid-container" id="grid-shampoo"></div></section>
+        <section id="page-conditioner" class="page"><h2 class="section-title">قسم البلسم</h2><div class="grid-container" id="grid-conditioner"></div></section>
+        <section id="page-leavein" class="page"><h2 class="section-title">قسم الليف ان</h2><div class="grid-container" id="grid-leavein"></div></section>
+        <section id="page-hairperfume" class="page"><h2 class="section-title">قسم معطرات الشعر</h2><div class="grid-container" id="grid-hairperfume"></div></section>
+        <section id="page-hairserum" class="page"><h2 class="section-title">قسم سيرومات الشعر</h2><div class="grid-container" id="grid-hairserum"></div></section>
+        <section id="page-lashes" class="page"><h2 class="section-title">قسم الرموش</h2><div class="grid-container" id="grid-lashes"></div></section>
+
+    </main>
+
+    <!-- نافذة تفاصيل المنتج -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <img id="modal-img" src="" alt="" class="modal-img">
+            <h2 id="modal-title">اسم المنتج</h2>
+            <p id="modal-price" class="modal-price"></p>
+            <div class="modal-section">
+                <h4>✨ المكونات:</h4>
+                <p id="modal-ingredients"></p>
+            </div>
+            <div class="modal-section">
+                <h4>🌸 الفوائد:</h4>
+                <p id="modal-benefits"></p>
+            </div>
+            <div class="modal-section">
+                <h4>💧 طريقة الاستخدام:</h4>
+                <p id="modal-usage"></p>
+            </div>
+            <button id="modal-add-btn" class="btn-primary">إضافة إلى السلة 🛒</button>
+        </div>
+    </div>
+
+    <!-- نافذة السلة -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="toggleCart()">&times;</span>
+            <h2>سلة التسوق 🛒</h2>
+            <div id="cart-items" class="cart-items-container"></div>
+            <div class="cart-summary">
+                <h3>المجموع الإجمالي: <span id="cart-total">0</span> ل.س</h3>
+                <button class="whatsapp-btn" onclick="sendToWhatsApp()">
+                    تأكيد الطلب عبر الواتساب 💬
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>&copy; SkinLoop, Glow , Repeat <br>
+            Made by Sarar Al-Halmoushi , Joudi Al-Deri , Raghad kattan <br>
+            Developed by Raghad Kattan 💻
+        </p>
+    </footer>
+
+    <!-- ربط ملف JavaScript المضمون -->
+    <script src="script.js"></script>
+</body>
+</html>

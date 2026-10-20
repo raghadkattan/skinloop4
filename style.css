@@ -1,0 +1,342 @@
+:root {
+    --primary-pink: #f8c8dc;
+    --soft-pink: #fde8f0;
+    --dark-pink: #d47a96;
+    --text-color: #4a4a4a;
+    --bg-color: #fff9fb;
+    --card-shadow: 0 4px 15px rgba(212, 122, 150, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Tajawal', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-bottom: 30px;
+}
+
+/* ==================== الهيدر والبنر ==================== */
+.main-header {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.banner-container {
+    width: 100%;
+    height: 35vw;
+    min-height: 150px;
+    max-height: 350px;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--soft-pink);
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: var(--soft-pink);
+}
+
+.logo-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--dark-pink);
+}
+
+.cart-btn {
+    background-color: var(--dark-pink);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.cart-btn:active {
+    transform: scale(0.95);
+}
+
+/* ==================== شريط العودة والمسار ==================== */
+.breadcrumb-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid var(--soft-pink);
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.back-btn {
+    background-color: var(--primary-pink);
+    color: #4a4a4a;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ==================== عرض الأقسام والمنتجات (كل 2 جنب بعض) ==================== */
+.container {
+    padding: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--dark-pink);
+    font-size: 1.3rem;
+}
+
+/* العرض على عنصرين دائماً بجانب بعضهما */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.category-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    background-color: #fff;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+    transition: transform 0.15s ease;
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+    color: white;
+    padding: 15px 5px 8px;
+    text-align: center;
+}
+
+.card-overlay h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.touch-effect:active {
+    transform: scale(0.94);
+    filter: brightness(0.9);
+}
+
+/* ==================== بطاقة المنتج ==================== */
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    cursor: pointer;
+    background-color: var(--soft-pink);
+}
+
+.product-info {
+    padding: 10px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    color: var(--dark-pink);
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.btn-primary {
+    background-color: var(--dark-pink);
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.85rem;
+    width: 100%;
+}
+
+/* ==================== النوافذ ==================== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 450px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #888;
+}
+
+.modal-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    background-color: var(--soft-pink);
+}
+
+.modal-price {
+    color: var(--dark-pink);
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.modal-section {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.modal-section h4 {
+    color: var(--dark-pink);
+    font-size: 0.9rem;
+}
+
+.modal-section p {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.cart-items-container {
+    margin: 15px 0;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--soft-pink);
+}
+
+.cart-item-controls button {
+    background: var(--soft-pink);
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cart-summary {
+    margin-top: 15px;
+    border-top: 2px solid var(--soft-pink);
+    padding-top: 10px;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--soft-pink);
+    color: #666;
+    font-size: 0.85rem;
+    margin-top: 30px;
+}
