@@ -342,7 +342,7 @@ window.sendToWhatsApp = function() {
         return;
     }
 
-    const phoneNumber = '963969623485';
+    const phoneNumber = '963954278701';
     let message = 'مرحباً SKINLOOP ،بدي ثبت هي الطلبية :\n\n';
     let total = 0;
 
