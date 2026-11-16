@@ -183,7 +183,7 @@ body {
 
 .product-img {
     width: 100%;
-    height: 500px;
+    height: 220px;
     object-fit: contain;
     cursor: pointer;
     background-color: var(--soft-pink);
