@@ -5,8 +5,8 @@ const productsData = {
         {
             id: 'l1',
             name: 'لوشن مفتح للجسم',
-            price: 500,
-            image: 'lotion-brightening.jpg',
+            price: 550,
+            image: 'clear_10.jpg',
             ingredients: 'ألفا أربوتين , نياسنمايد, زبدة الشيا , زيت جوز الهند',
             benefits: 'يساعد على توحيد لون البشرة وتفتيح البقع الداكنة مع ترطيب .',
             usage: 'يُدهن على جسم نظيف يومياً بعد الاستحمام .'
@@ -15,7 +15,7 @@ const productsData = {
             id: 'l2',
             name: 'لوشن بريحة دوف',
             price: 340,
-            image: 'lotion-dove.jpg',
+            image: 'aria_13.jpg',
             ingredients: ' زبدة الشيا , زيت جوز الهند , غليسرين .',
             benefits: 'تنعيم و إصلاح ملمس البشرة , ترطيب عميق وحبس الرطوبة , رائحة جذابة :يمنح جسمك لمسة عطرية تدوم طويلا ',
             usage: 'يستخدم يومياً على الجسم للترطيب .'
@@ -24,7 +24,7 @@ const productsData = {
             id: 'l3',
             name: 'لوشن بريحة الرمان',
             price: 340,
-            image: 'lotion-pomegranate.jpg',
+            image: 'ruby_11.jpg',
             ingredients: ' زبدة الشيا, زيت جوز الهند, غليسرين.',
              benefits: 'تنعيم و إصلاح ملمس البشرة , ترطيب عميق وحبس الرطوبة , رائحة جذابة :يمنح جسمك لمسة عطرية تدوم طويلا ',
             usage: 'يستخدم يومياً على الجسم للترطيب .'
@@ -33,7 +33,7 @@ const productsData = {
             id: 'l4',
             name: 'لوشن بريحة ديلينا ',
             price: 370,
-            image: 'lotion-orgate.jpg',
+            image: 'pink_escape_14.jpg',
             ingredients: 'زبدة الشيا , زيت جوز الهند ,غليسرين ',
              benefits: 'تنعيم و إصلاح ملمس البشرة , ترطيب عميق وحبس الرطوبة , رائحة جذابة :يمنح جسمك لمسة عطرية تدوم طويلا ',
             usage: 'يستخدم يومياً على الجسم للترطيب .'
@@ -45,8 +45,8 @@ const productsData = {
         {
             id: 's1',
             name: 'سكراب بالنيلة الزرقاء',
-            price: 340,
-            image: 'scrub-blue.jpg',
+            price: 450,
+            image: 'nile_01.jpg',
             ingredients: 'بودرة النيلة المغربية الزرقاء، زبدة الشيا, زيت جوز الهند.',
             benefits: 'يساعد في تفتيح المناطق الداكنة وإزالة الجلد الميت وتحسين ملمس البشرة.',
             usage: 'يدلك على بشرة مبللة بحركات دائرية ل3 دقائق ثم يشطف بالماء الدافئ (يستخدم من مرة الى مرتين اسبوعياً) .'
@@ -54,8 +54,8 @@ const productsData = {
         {
             id: 's2',
             name: 'سكراب العكر الفاسي و الكركديه',
-            price: 35000,
-            image: 'scrub-hibiscus.jpg',
+            price: 450,
+            image: 'tint_02.jpg',
             ingredients: 'مستخلص الكركديه ,عكر فاسي , غزبدة الشيا, زيت جوز الهند',
             benefits: 'يمد البشرة بمضادات الأكسدة ويعطي نضارة وتوريد طبيعي للجسم.',
              usage: 'يدلك على بشرة مبللة بحركات دائرية ل3 دقائق ثم يشطف بالماء الدافئ (يستخدم من مرة الى مرتين اسبوعياً) .'
@@ -63,8 +63,8 @@ const productsData = {
         {
             id: 's3',
             name: 'سكراب بالورد',
-            price: 36000,
-            image: 'scrub-rose.jpg',
+            price: 450,
+            image: 'rose_03.jpg',
             ingredients: 'زيت الورد الطبيعي , زبدة الشيا , زيت جوز الهند',
             benefits: 'تقشير لطيف مع رائحة ورد طبيعية وترطيب عميق.',
             usage: 'يدلك على بشرة مبللة بحركات دائرية ل3 دقائق ثم يشطف بالماء الدافئ (يستخدم من مرة الى مرتين اسبوعياً) .'
@@ -76,8 +76,8 @@ const productsData = {
         {
             id: 'sg1',
             name: 'شاور جل بريحة دوف',
-            price: 30000,
-            image: 'shower-dove.jpg',
+            price: 300,
+            image: 'dove_shower.jpg',
             ingredients: 'غليسرين , مواد منظفة لطيفة',
             benefits: 'تنظيف لطيف لا يجفف البشرة ويتركها ناعمة برائحة النظافة.',
             usage: ' توضع كمية مناسبة من الشاور جل ويُدلك  بها الجسم حتى تتكون رغوة غنية , ثم يشطف جيداً بماء دافئ .'
@@ -85,8 +85,8 @@ const productsData = {
         {
             id: 'sg2',
             name: 'شاور جل بريحة ديلينا ',
-            price: 32000,
-            image: 'shower-orgate.jpg',
+            price: 330,
+            image: 'delina_shower.jpg',
             ingredients: ' غليسرين , مواد منظفة لطيفة.',
             benefits: 'تنظيف لطيف لا يجفف البشرة ويتركها ناعمة برائحة وردية انثوية.',
             usage: ' توضع كمية مناسبة من الشاور جل ويُدلك  بها الجسم حتى تتكون رغوة غنية , ثم يشطف جيداً بماء دافئ .'
@@ -94,8 +94,8 @@ const productsData = {
         {
             id: 'sg3',
             name: 'شاور جل بريحة مسك الرمان',
-            price: 34000,
-            image: 'shower-pomegranate.jpg',
+            price: 300,
+            image: 'p_shower.jpg',
             ingredients: '    غليسرين,  مواد منظفة لطيفة.',
             benefits: 'تنظيف لطيف لا يجفف البشرة ويتركها ناعمة برائحة الرمان.',
             usage: ' توضع كمية مناسبة من الشاور جل ويُدلك  بها الجسم حتى تتكون رغوة غنية , ثم يشطف جيداً بماء دافئ .'
@@ -107,8 +107,8 @@ const productsData = {
         {
             id: 'bp1',
             name: 'بكج دوف',
-            price: 95000,
-            image: 'pkg-dove.jpg',
+            price: 1000,
+            image: 'pkg_dove.jpg',
             ingredients: ' سكراب النيلة, شاور جل دوف, لوشن دوف ',
             benefits: ' يمنحك الباكج بشرة ناعمة , موحدة اللون , ومفعمة بالانتعاش',
             usage:''
@@ -116,8 +116,8 @@ const productsData = {
         {
             id: 'bp2',
             name: 'بكج رمان',
-            price: 105000,
-            image: 'pkg-pomegranate.jpg',
+            price: 1000,
+            image: 'p_pkg.jpg',
             ingredients: 'سكراب العكر الفاسي والكركديه , شاور جل رمان , لوشن رمان',
             benefits: 'بشرة متوردة , ناعمة , ومعطرة برائحة بالرمان',
             usage: '     '
@@ -125,8 +125,8 @@ const productsData = {
         {
             id: 'bp3',
             name: 'بكج ورد',
-            price: 98000,
-            image: 'pkg-rose.jpg',
+            price: 1050,
+            image: 'delina_pkg.jpg',
             ingredients: ' سكراب الورد , شاور جل ديلينا , لوشن ديلينا',
             benefits: '  بشرة مشرقة مشدودة , مفعمة بالنعومة   ',
             usage: '    '
@@ -134,8 +134,8 @@ const productsData = {
         {
             id: 'bp4',
             name: 'بكج التفتيح',
-            price: 555,
-            image: 'pkg.jpg',
+            price: 900,
+            image: 'w_pkg.jpg',
             ingredients: 'سكراب النيلة , لوشن مفتح بالالفا اربوتين والنياسيناميد',
             benfits :'بشرة مشرقة وموحدة اللون',
             usage:''
