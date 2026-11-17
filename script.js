@@ -63,7 +63,7 @@ const productsData = {
         {
             id: 's3',
             name: 'سكراب بالورد',
-            price: 450,
+            price: 400,
             image: 'rose_03.jpg',
             ingredients: 'زيت الورد الطبيعي , زبدة الشيا , زيت جوز الهند',
             benefits: 'تقشير لطيف مع رائحة ورد طبيعية وترطيب عميق.',
@@ -125,7 +125,7 @@ const productsData = {
         {
             id: 'bp3',
             name: 'بكج ورد',
-            price: 1050,
+            price: 1000,
             image: 'delina_pkg.jpg',
             ingredients: ' سكراب الورد , شاور جل ديلينا , لوشن ديلينا',
             benefits: '  بشرة مشرقة مشدودة , مفعمة بالنعومة   ',
